@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { AppBar, Toolbar, Typography, Button, IconButton, Box, Drawer, List, ListItem, ListItemText, useTheme, useMediaQuery } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import { Link } from 'react-scroll';
-import logo5 from "../assets/logo5.png";
+import logo5 from "../assets/Logo5.png";
 
 const navItems = ['Home', 'About', 'Services', 'Products', 'Contact'];
 
