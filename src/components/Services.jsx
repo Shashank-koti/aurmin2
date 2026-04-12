@@ -31,10 +31,10 @@ const services = [
 
 const Services = () => {
   return (
-    <Box id="services" sx={{ py: 12, backgroundColor: '#ffffff' }}>
+    <Box id="services" sx={{ py: 12, backgroundColor: '#4B4A3F' }}>
       <Container maxWidth="lg">
         <Box sx={{ textAlign: 'center', mb: 8 }}>
-          <Typography variant="h6" color="primary" gutterBottom sx={{ fontWeight: 600, letterSpacing: 1 }}>
+          <Typography variant="h6" color="secondary" gutterBottom sx={{ fontWeight: 600, letterSpacing: 1 }}>
             OUR EXPERTISE
           </Typography>
           <Typography variant="h2" color="text.primary" sx={{ fontWeight: 700 }}>
@@ -46,10 +46,10 @@ const Services = () => {
           {services.map((service, index) => (
             <Box key={index}>
               <motion.div
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
+                transition={{ duration: 0.8, delay: index * 0.15, ease: 'easeOut' }}
+                viewport={{ once: true, amount: 0.2 }}
                 style={{ height: '100%' }}
               >
                 <Card 
@@ -60,10 +60,11 @@ const Services = () => {
                     borderRadius: 4,
                     overflow: 'hidden',
                     transition: 'all 0.3s ease-in-out',
-                    border: '1px solid #f1f5f9',
+                    border: 'none',
+                    bgcolor: '#F3E9D2',
                     '&:hover': {
                       transform: 'translateY(-10px)',
-                      boxShadow: '0 20px 40px rgba(56, 189, 248, 0.15)',
+                      boxShadow: '0 20px 40px rgba(212, 175, 55, 0.2)',
                     }
                   }}
                 >
@@ -74,11 +75,11 @@ const Services = () => {
                     alt={service.title}
                     sx={{ objectFit: 'cover' }}
                   />
-                  <CardContent sx={{ p: 3, flexGrow: 1, backgroundColor: '#ffffff' }}>
-                    <Typography variant="h6" sx={{ mb: 1, fontWeight: 700, color: '#1e293b' }}>
+                  <CardContent sx={{ p: 3, flexGrow: 1, backgroundColor: '#F3E9D2' }}>
+                    <Typography variant="h6" sx={{ mb: 1, fontWeight: 700, color: '#1F2937' }}>
                       {service.title}
                     </Typography>
-                    <Typography variant="body2" sx={{ color: '#64748b', lineHeight: 1.6 }}>
+                    <Typography variant="body2" sx={{ color: '#4B4A3F', lineHeight: 1.6 }}>
                       {service.description}
                     </Typography>
                   </CardContent>

@@ -2,6 +2,7 @@ import React from 'react';
 import { Box, Typography, Button, Container, Stack } from '@mui/material';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import image from "../assets/exportHero.jpg"
+import Brochure from "../assets/Brochure.pdf"
 
 const Hero = () => {
   const { scrollY } = useScroll();
@@ -32,89 +33,72 @@ const Hero = () => {
           backgroundImage: `url(${image})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
-          zIndex: -2,
+          zIndex: 0,
         }}
       />
-      <Box 
+      <Box
         sx={{
           position: 'absolute',
           top: 0,
           left: 0,
           width: '100%',
           height: '100%',
-          zIndex: -1,
+          zIndex: 1,
         }}
       />
-      
-      <Container maxWidth="lg" sx={{ position: 'relative', zIndex: 1, pt: 10 }}>
+
+      <Container maxWidth="lg" sx={{ position: 'relative', zIndex: 2, pt: 10 }}>
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.9, ease: 'easeOut' }}
+          transition={{ duration: 0.9, delay: 0.15, ease: 'easeOut' }}
         >
           <Typography
             variant="h1"
             sx={{
-              color: 'white',
+              color: '#D4AF37',
               fontSize: { xs: '3rem', md: '4.5rem', lg: '5.5rem' },
               fontWeight: 800,
               maxWidth: '800px',
-              color:"#0F172A",
               mb: 3,
               lineHeight: 1.1,
             }}
           >
             Empowering Global Trade
           </Typography>
-          
+
           <Typography
             variant="h5"
             sx={{
-              color: 'rgba(255,255,255,0.9)',
               mb: 5,
               maxWidth: '650px',
               fontWeight: 400,
               fontSize: { xs: '1.1rem', md: '1.4rem' },
               lineHeight: 1.6,
-              color:"#F8FAFC"
+              color: "#F8FAFC",
+              textShadow: "0px 2px 10px rgba(0,0,0,0.7)"
             }}
           >
             We are your premier partner in worldwide logistics, ensuring professional, reliable, and secure export solutions.
           </Typography>
 
           <Stack direction={{ xs: 'column', sm: 'row' }} spacing={2}>
-            <Button 
-              variant="contained" 
+            <Button
+              variant="contained"
+              color="primary"
               size="large"
-              sx={{ 
-                px: 4, py: 1.5, fontSize: '1.1rem', borderRadius: 2,
-                backgroundColor: 'white', color: '#0284C7',
-                '&:hover': {
-                  backgroundColor: '#f1f1f1',
-                }
-              }}
             >
               Get Started
             </Button>
-            <Button 
-              variant="outlined" 
+            <Button
+              component="a"
+              href={Brochure}
+              download
+              variant="outlined"
+              color="secondary"
               size="large"
-              sx={{ 
-                color: 'white', 
-                borderColor: 'white', 
-                px: 4, py: 1.5, 
-                fontSize: '1.1rem', 
-                borderRadius: 2,
-                borderWidth: 2,
-                '&:hover': {
-                  borderColor: '#e2e8f0',
-                  color: '#e2e8f0',
-                  borderWidth: 2,
-                  backgroundColor: 'rgba(255,255,255,0.1)'
-                }
-              }}
             >
-              Contact Us
+              Brochure
             </Button>
           </Stack>
         </motion.div>

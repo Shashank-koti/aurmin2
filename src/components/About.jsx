@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 
 const About = () => {
   return (
-    <Box id="about" sx={{ py: 12, backgroundColor: '#f8fafc' }}>
+    <Box id="about" sx={{ py: 12, backgroundColor: '#4B4A3F' }}>
       <Container maxWidth="lg">
         <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', md: 'repeat(2, 1fr)' }, gap: 8, alignItems: 'center' }}>
           <Box>
@@ -14,7 +14,7 @@ const About = () => {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <Typography variant="h6" color="primary" gutterBottom sx={{ fontWeight: 600, letterSpacing: 1 }}>
+              <Typography variant="h6" color="secondary" gutterBottom sx={{ fontWeight: 600, letterSpacing: 1 }}>
                 ABOUT AURMIN
               </Typography>
               <Typography variant="h2" color="text.primary" sx={{ fontWeight: 700, mb: 4 }}>
@@ -29,20 +29,6 @@ const About = () => {
                 Our vision bridges local producers directly to the global marketplace, establishing sustainable, compliant, and highly transparent supply chains for all of our international partners.
               </Typography>
 
-              <Box sx={{ display: 'flex', gap: 4, mb: 5 }}>
-                <Box>
-                  <Typography variant="h3" color="primary" sx={{ fontWeight: 800 }}>120+</Typography>
-                  <Typography variant="body2" color="text.secondary">Countries Served</Typography>
-                </Box>
-                <Box>
-                  <Typography variant="h3" color="primary" sx={{ fontWeight: 800 }}>10K+</Typography>
-                  <Typography variant="body2" color="text.secondary">Shipments Delivered</Typography>
-                </Box>
-              </Box>
-
-              <Button variant="contained" color="primary" size="large" sx={{ borderRadius: 2 }}>
-                Discover Our Story
-              </Button>
             </motion.div>
           </Box>
           
@@ -74,12 +60,12 @@ const About = () => {
                     position: 'absolute',
                     bottom: 0, left: 0, right: 0,
                     p: 4,
-                    background: 'linear-gradient(transparent, rgba(2, 132, 199, 0.9))',
+                    background: 'linear-gradient(transparent, rgba(47, 93, 80, 0.9))',
                     color: 'white'
                   }}
                 >
-                  <Typography variant="h4" sx={{ fontWeight: 700 }}>25+ Years</Typography>
-                  <Typography variant="body1">Of Global Logistics Excellence</Typography>
+                  <Typography variant="h4" sx={{ fontWeight: 700 }}>Quality trust</Typography>
+                  <Typography variant="body1">exports you can rely on.</Typography>
                 </Box>
               </Paper>
             </motion.div>

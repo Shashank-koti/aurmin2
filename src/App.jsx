@@ -5,21 +5,19 @@ import Services from './components/Services';
 import Products from './components/Products';
 import About from './components/About';
 import WhyChooseUs from './components/WhyChooseUs';
-import Testimonials from './components/Testimonials';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import { Box } from '@mui/material';
 
 function App() {
   return (
-    <Box sx={{ width: '100%', maxWidth: '100vw', overflowX: 'hidden' }}>
+    <Box sx={{ width: '100%', maxWidth: '100vw', overflowX: 'hidden', backgroundColor: '#4B4A3F', color: '#F8FAFC' }}>
       <Navbar />
       <Hero />
-      <Services />
-      <Products />
       <About />
+      <Products />
+      <Services />
       <WhyChooseUs />
-      <Testimonials />
       <Contact />
       <Footer />
     </Box>

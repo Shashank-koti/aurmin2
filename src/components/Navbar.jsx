@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { AppBar, Toolbar, Typography, Button, IconButton, Box, Drawer, List, ListItem, ListItemText, useTheme, useMediaQuery } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import { Link } from 'react-scroll';
+import logo5 from "../assets/logo5.png";
 
 const navItems = ['Home', 'About', 'Services', 'Products', 'Contact'];
 
@@ -24,10 +25,10 @@ const Navbar = () => {
   }, []);
 
   const drawer = (
-    <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center', backgroundColor: '#38BDF8', height: '100%', color: 'white' }}>
-      <Typography variant="h6" sx={{ my: 2, fontWeight: 'bold' }}>
-        AURMIN
-      </Typography>
+    <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center', backgroundColor: '#2F5D50', height: '100%', color: '#F8FAFC' }}>
+      <Box sx={{ my: 3, display: 'flex', justifyContent: 'center' }}>
+        <Box component="img" src={logo5} alt="Aurmin Logo" sx={{ height: 45, width: 'auto' }} />
+      </Box>
       <List>
         {navItems.map((item) => (
           <ListItem key={item} disablePadding>
@@ -38,7 +39,7 @@ const Navbar = () => {
         ))}
         <ListItem disablePadding>
           <Box sx={{ width: '100%', display: 'flex', justifyContent: 'center', mt: 2 }}>
-            <Button variant="contained" sx={{ borderRadius: 20, backgroundColor: 'white', color: '#38BDF8', '&:hover': { backgroundColor: '#f1f1f1' } }}>
+            <Button variant="contained" color="#D4AF37" sx={{ borderRadius: 20 }}>
               Get a Quote
             </Button>
           </Box>
@@ -48,29 +49,32 @@ const Navbar = () => {
   );
 
   return (
-    <AppBar 
-      position="fixed" 
-      sx={{ 
-        background: scrolled ? '#ffffff' : 'transparent',
-        boxShadow: scrolled ? '0 4px 20px rgba(0,0,0,0.05)' : 'none',
+    <AppBar
+      position="fixed"
+      sx={{
+        background: scrolled ? '#2F5D50' : 'transparent',
+        boxShadow: scrolled ? '0 4px 20px rgba(0,0,0,0.2)' : 'none',
         transition: 'all 0.3s ease-in-out',
         padding: { xs: '0.5rem 0', md: '0.5rem 2rem' }
       }}
     >
       <Toolbar sx={{ display: 'flex', justifyContent: 'space-between' }}>
-        <Typography
-          variant="h5"
-          component="div"
-          sx={{ 
-            fontWeight: 800, 
-            letterSpacing: '1px', 
-            cursor: 'pointer', 
-            color: scrolled ? '#38BDF8' : '#38BDF8',
-            transition: 'color 0.3s'
-          }}
-        >
-          <Link to="home" smooth={true} duration={500}>AURMIN</Link>
-        </Typography>
+        <Box sx={{ display: 'flex', alignItems: 'center', cursor: 'pointer' }}>
+          <Link to="home" smooth={true} duration={500} style={{ display: 'flex', alignItems: 'center' }}>
+            <Box
+              component="img"
+              src={logo5}
+              alt="Aurmin Logo"
+              sx={{
+                height: { xs: 40, md: 50 },
+                width: 'auto',
+                transition: 'transform 0.3s',
+                filter: scrolled ? 'none' : 'drop-shadow(0 2px 4px rgba(0,0,0,0.5))',
+                '&:hover': { transform: 'scale(1.05)' }
+              }}
+            />
+          </Link>
+        </Box>
 
         {isMobile ? (
           <IconButton
@@ -79,17 +83,17 @@ const Navbar = () => {
             edge="start"
             onClick={handleDrawerToggle}
           >
-            <MenuIcon fontSize="large" sx={{ color: scrolled ? '#38BDF8' : '#ffffff' }} />
+            <MenuIcon fontSize="large" sx={{ color: scrolled ? '#D4AF37' : '#ffffff' }} />
           </IconButton>
         ) : (
           <Box sx={{ display: 'flex', alignItems: 'center', gap: 4 }}>
             {navItems.map((item) => (
               <Box key={item} sx={{ position: 'relative', display: 'flex', flexDirection: 'column' }}>
                 <Link to={item.toLowerCase()} smooth={true} duration={500} style={{ cursor: 'pointer' }}>
-                  <Typography 
-                    sx={{ 
-                      color: scrolled ? '#1e293b' : '#1e293b', 
-                      fontWeight: 500, 
+                  <Typography
+                    sx={{
+                      color: scrolled ? '#F8FAFC' : '#4B4A3F',
+                      fontWeight: 500,
                       position: 'relative',
                       display: 'inline-block',
                       '&::after': {
@@ -99,13 +103,13 @@ const Navbar = () => {
                         height: '2px',
                         bottom: '-4px',
                         left: '0',
-                        backgroundColor: scrolled ? '#38BDF8' : '#38BDF8',
+                        backgroundColor: '#D4AF37',
                         transition: 'width 0.3s ease',
                       },
                       '&:hover::after': {
                         width: '100%',
                       },
-                      '&:hover': { color: scrolled ? '#38BDF8' : '#38BDF8' },
+                      '&:hover': { color: '#D4AF37' },
                       transition: 'color 0.3s'
                     }}
                   >
@@ -114,18 +118,13 @@ const Navbar = () => {
                 </Link>
               </Box>
             ))}
-            <Button 
-              variant="contained" 
-              color="primary" 
-              sx={{ 
-                borderRadius: 20, 
-                fontWeight: 600, 
+            <Button
+              variant="contained"
+              color="primary"
+              sx={{
+                borderRadius: 20,
+                fontWeight: 600,
                 paddingX: 3,
-                backgroundColor: scrolled ? '#38BDF8' : 'white',
-                color: scrolled ? 'white' : '#38BDF8',
-                '&:hover': {
-                  backgroundColor: scrolled ? '#0284C7' : '#f8fafc',
-                }
               }}
             >
               Get a Quote
@@ -133,7 +132,7 @@ const Navbar = () => {
           </Box>
         )}
       </Toolbar>
-      
+
       <Drawer
         anchor="right"
         open={mobileOpen}

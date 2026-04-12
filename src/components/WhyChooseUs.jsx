@@ -10,22 +10,22 @@ const reasons = [
   {
     title: '24/7 Support',
     desc: 'Round-the-clock assistance for all your logistics needs.',
-    icon: <SupportAgentIcon sx={{ fontSize: 50, color: '#38BDF8' }} />
+    icon: <SupportAgentIcon sx={{ fontSize: 50, color: '#D4AF37' }} />
   },
   {
     title: 'Trusted Global Network',
     desc: 'Partners and facilities spanning across 120+ countries.',
-    icon: <LanguageIcon sx={{ fontSize: 50, color: '#38BDF8' }} />
+    icon: <LanguageIcon sx={{ fontSize: 50, color: '#D4AF37' }} />
   },
   {
     title: 'Fast Delivery',
     desc: 'Optimized routing for the quickest transit times possible.',
-    icon: <RocketLaunchIcon sx={{ fontSize: 50, color: '#38BDF8' }} />
+    icon: <RocketLaunchIcon sx={{ fontSize: 50, color: '#D4AF37' }} />
   },
   {
     title: 'Quality Assurance',
     desc: 'Rigorous inspection processes to ensure product integrity.',
-    icon: <HighQualityIcon sx={{ fontSize: 50, color: '#38BDF8' }} />
+    icon: <HighQualityIcon sx={{ fontSize: 50, color: '#D4AF37' }} />
   }
 ];
 
@@ -34,12 +34,12 @@ const WhyChooseUs = () => {
     <Box 
       sx={{ 
         py: 12, 
-        backgroundColor: '#f8fafc',
+        backgroundColor: '#4B4A3F',
       }}
     >
       <Container maxWidth="lg">
         <Box sx={{ textAlign: 'center', mb: 8 }}>
-          <Typography variant="h6" color="primary" gutterBottom sx={{ fontWeight: 600, letterSpacing: 1 }}>
+          <Typography variant="h6" color="secondary" gutterBottom sx={{ fontWeight: 600, letterSpacing: 1 }}>
             WHY CHOOSE US
           </Typography>
           <Typography variant="h2" color="text.primary" sx={{ fontWeight: 700 }}>
@@ -61,22 +61,22 @@ const WhyChooseUs = () => {
                     height: '100%', 
                     boxShadow: '0 4px 6px -1px rgba(0,0,0,0.05)',
                     p: 2,
-                    backgroundColor: '#ffffff',
-                    border: '1px solid #e2e8f0',
+                    backgroundColor: '#F3E9D2',
+                    border: '1px solid transparent',
                     transition: 'all 0.3s',
                     '&:hover': {
-                      boxShadow: '0 20px 25px -5px rgba(0,0,0,0.1)',
+                      boxShadow: '0 20px 25px -5px rgba(0,0,0,0.2)',
                       transform: 'translateY(-5px)',
-                      borderColor: '#38BDF8'
+                      borderColor: '#D4AF37'
                     }
                   }}
                 >
                   <CardContent sx={{ textAlign: 'center' }}>
                     <Box sx={{ mb: 2 }}>{reason.icon}</Box>
-                    <Typography variant="h6" sx={{ fontWeight: 700, mb: 1, color: '#1e293b' }}>
+                    <Typography variant="h6" sx={{ fontWeight: 700, mb: 1, color: '#1F2937' }}>
                       {reason.title}
                     </Typography>
-                    <Typography variant="body2" color="text.secondary">
+                    <Typography variant="body2" sx={{ color: '#4B4A3F' }}>
                       {reason.desc}
                     </Typography>
                   </CardContent>
