@@ -3,6 +3,7 @@ import { Box, Container, Typography, Grid, Link, IconButton, Divider } from '@mu
 import FacebookIcon from '@mui/icons-material/Facebook';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
+// import { Link } from 'react-scroll';
 
 const Footer = () => {
   return (
@@ -31,10 +32,10 @@ const Footer = () => {
           
           <Box sx={{ gridColumn: { xs: 'span 1' } }}>
             <Typography variant="subtitle1" sx={{ fontWeight: 700, mb: 2 }}>Quick Links</Typography>
-            <Link href="#" color="inherit" underline="none" sx={{ display: 'block', mb: 1, color: '#E6D3A3', '&:hover': { color: '#D4AF37' } }}>Home</Link>
-            <Link href="#" color="inherit" underline="none" sx={{ display: 'block', mb: 1, color: '#E6D3A3', '&:hover': { color: '#D4AF37' } }}>About Us</Link>
-            <Link href="#" color="inherit" underline="none" sx={{ display: 'block', mb: 1, color: '#E6D3A3', '&:hover': { color: '#D4AF37' } }}>Services</Link>
-            <Link href="#" color="inherit" underline="none" sx={{ display: 'block', mb: 1, color: '#E6D3A3', '&:hover': { color: '#D4AF37' } }}>Contact</Link>
+            <Link href="#home" color="inherit" underline="none" sx={{ display: 'block', mb: 1, color: '#E6D3A3', '&:hover': { color: '#D4AF37' } }}>Home</Link>
+            <Link href="#about" color="inherit" underline="none" sx={{ display: 'block', mb: 1, color: '#E6D3A3', '&:hover': { color: '#D4AF37' } }}>About Us</Link>
+            <Link href="#services" color="inherit" underline="none" sx={{ display: 'block', mb: 1, color: '#E6D3A3', '&:hover': { color: '#D4AF37' } }}>Services</Link>
+            <Link href="#contact" color="inherit" underline="none" sx={{ display: 'block', mb: 1, color: '#E6D3A3', '&:hover': { color: '#D4AF37' } }}>Contact</Link>
           </Box>
 
           <Box sx={{ gridColumn: { xs: 'span 1' } }}>
@@ -48,10 +49,10 @@ const Footer = () => {
           <Box sx={{ gridColumn: { xs: 'span 2', md: 'span 1' }, textAlign: { xs: 'center', md: 'left' } }}>
             <Typography variant="subtitle1" sx={{ fontWeight: 700, mb: 2 }}>Support</Typography>
             <Typography variant="body2" sx={{ color: '#E6D3A3', mb: 1 }}>
-              Email: inquiries@aurmin.com
+              Email: Info@Auminglobal.com
             </Typography>
             <Typography variant="body2" sx={{ color: '#E6D3A3' }}>
-              Phone: +1 (800) 123-4567
+              phone: +91-9177980851
             </Typography>
           </Box>
         </Box>

@@ -83,13 +83,14 @@ const Hero = () => {
           </Typography>
 
           <Stack direction={{ xs: 'column', sm: 'row' }} spacing={2}>
-            <Button
+            {/* <Button
               variant="contained"
               color="primary"
               size="large"
+              href="https://wa.me/917893546664" target="_blank"
             >
-              Get Started
-            </Button>
+              Chat with
+            </Button> */}
             <Button
               component="a"
               href={Brochure}
