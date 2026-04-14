@@ -7,6 +7,7 @@ import {
   TextField,
   Button,
   Paper,
+  CircularProgress
 } from "@mui/material";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import PhoneIcon from "@mui/icons-material/Phone";
@@ -20,6 +21,7 @@ const Contact = () => {
     message: "",
   });
 
+  const [loading, setLoading] = useState(false);
   const [errors, setErrors] = useState({});
 
   const handleChange = (e) => {
@@ -54,40 +56,41 @@ const Contact = () => {
   };
 
   const handleSubmit = async (e) => {
-  e.preventDefault();
+    e.preventDefault();
 
-  if (!validate()) return;
+    if (!validate()) return;
+    setLoading(true);
 
-  const formBody = new FormData();
-  formBody.append("name", formData.name);
-  formBody.append("number", formData.phone);
-  formBody.append("email", formData.email);
-  formBody.append("message", formData.message);
+    const formBody = new FormData();
+    formBody.append("name", formData.name);
+    formBody.append("number", formData.phone);
+    formBody.append("email", formData.email);
+    formBody.append("message", formData.message);
 
-  try {
-    await fetch(
-      "https://script.google.com/macros/s/AKfycbwVuWu6_nR4AFPjhhEBDITMCJ31hMB1Lj9IRVoS6V6w0HLGFgexm92JJzCD_rl-CVvK/exec",
-      {
-        method: "POST",
-        body: formBody,
-      }
-    );
+    try {
+      await fetch(
+        "https://script.google.com/macros/s/AKfycbwVuWu6_nR4AFPjhhEBDITMCJ31hMB1Lj9IRVoS6V6w0HLGFgexm92JJzCD_rl-CVvK/exec",
+        {
+          method: "POST",
+          body: formBody,
+        },
+      );
 
-    alert("Request sent successfully 🚀");
+      alert("Request sent successfully 🚀");
 
-    setFormData({
-      name: "",
-      phone: "",
-      email: "",
-      message: "",
-    });
-  } catch (error) {
-    console.error(error);
-    alert("Something went wrong");
-  }
+      setFormData({
+        name: "",
+        phone: "",
+        email: "",
+        message: "",
+      });
+    } catch (error) {
+      console.error(error);
+      alert("Something went wrong");
+    }
 
-  console.log(formData);
-};
+    setLoading(false);
+  };
   return (
     <Box id="contact" sx={{ py: 12, backgroundColor: "#4B4A3F" }}>
       <Container maxWidth="lg">
@@ -314,7 +317,11 @@ const Contact = () => {
                         fontSize: "1.1rem",
                       }}
                     >
-                      Submit Inquiry
+                      {loading ? (
+                        <CircularProgress size={24} sx={{ color: "white" }} />
+                      ) : (
+                        "Submit Inquiry"
+                      )}
                     </Button>
                   </Box>
                 </Box>
