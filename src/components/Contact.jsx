@@ -7,11 +7,12 @@ import {
   TextField,
   Button,
   Paper,
-  CircularProgress
+  CircularProgress,
 } from "@mui/material";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import PhoneIcon from "@mui/icons-material/Phone";
 import EmailIcon from "@mui/icons-material/Email";
+import Swal from "sweetalert2";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -76,7 +77,15 @@ const Contact = () => {
         },
       );
 
-      alert("Request sent successfully 🚀");
+      Swal.fire({
+        title: "Success!",
+        text: "Request sent successfully 🚀",
+        icon: "success",
+        confirmButtonText: "OK",
+        background: "#4B4A3F",
+        color: "#fff",
+        confirmButtonColor: "#0e1f02",
+      });
 
       setFormData({
         name: "",
