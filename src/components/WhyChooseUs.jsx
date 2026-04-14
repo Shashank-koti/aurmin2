@@ -13,7 +13,7 @@ const reasons = [
     icon: <SupportAgentIcon sx={{ fontSize: 50, color: '#D4AF37' }} />
   },
   {
-    title: 'Trusted Global Network',
+    title: 'Global Network',
     desc: 'Partners and facilities spanning across 120+ countries.',
     icon: <LanguageIcon sx={{ fontSize: 50, color: '#D4AF37' }} />
   },
@@ -23,7 +23,7 @@ const reasons = [
     icon: <RocketLaunchIcon sx={{ fontSize: 50, color: '#D4AF37' }} />
   },
   {
-    title: 'Quality Assurance',
+    title: 'Inspection',
     desc: 'Rigorous inspection processes to ensure product integrity.',
     icon: <HighQualityIcon sx={{ fontSize: 50, color: '#D4AF37' }} />
   }
