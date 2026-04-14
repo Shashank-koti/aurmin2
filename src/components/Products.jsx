@@ -39,7 +39,7 @@ const Products = () => {
         <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', mb: 6, flexWrap: 'wrap', gap: 3 }}>
           <Box maxWidth="600px">
             <Typography variant="h6" color="secondary" gutterBottom sx={{ fontWeight: 600, letterSpacing: 1 }}>
-              INDUSTRIES
+              PRODUCTS
             </Typography>
             <Typography variant="h2" color="text.primary" sx={{ fontWeight: 700, mb: 2 }}>
               What We Export

@@ -15,7 +15,7 @@ import {
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import { Link } from "react-scroll";
-import logo5 from "../assets/Logo5.png";
+import logo1 from "../assets/logo1.png";
 
 const navItems = ["Home", "About", "Services", "Products", "Contact"];
 
@@ -50,7 +50,7 @@ const Navbar = () => {
       <Box sx={{ my: 3, display: "flex", justifyContent: "center" }}>
         <Box
           component="img"
-          src={logo5}
+          src={logo1}
           alt="Aurmin Logo"
           sx={{ height: 45, width: "auto" }}
         />
@@ -116,7 +116,7 @@ const Navbar = () => {
           >
             <Box
               component="img"
-              src={logo5}
+              src={logo1}
               alt="Aurmin Logo"
               sx={{
                 height: { xs: 40, md: 50 },
