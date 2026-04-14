@@ -48,8 +48,8 @@ const Footer = () => {
 
           <Box sx={{ gridColumn: { xs: 'span 2', md: 'span 1' }, textAlign: { xs: 'center', md: 'left' } }}>
             <Typography variant="subtitle1" sx={{ fontWeight: 700, mb: 2 }}>Support</Typography>
-            <Typography variant="body2" sx={{ color: '#E6D3A3', mb: 1 }}>
-              Email: Info@Auminglobal.com
+            <Typography variant="body2" sx={{ color: '#E6D3A3', mb: 1, whiteSpace: "nowrap" }}>
+              Email: info@aurminglobal.com
             </Typography>
             <Typography variant="body2" sx={{ color: '#E6D3A3' }}>
               phone: +91-9177980851
