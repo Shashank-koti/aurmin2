@@ -6,7 +6,7 @@ import turmeric from "../assets/turmeric.jpg";
 import ginger from "../assets/ginger.jpg";
 import spices from "../assets/spices.jpg";
 import chillies from "../assets/redChilli.jpg";
-import Brochure from "../assets/Brochure.pdf";
+import Brochure from "../assets/Brochure-final.pdf";
 
 
 const products = [

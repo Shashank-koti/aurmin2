@@ -19,6 +19,7 @@ const Contact = () => {
     name: "",
     phone: "",
     email: "",
+    country: "",
     message: "",
   });
 
@@ -48,6 +49,10 @@ const Contact = () => {
       temp.email = "Enter valid email";
     }
 
+    if (!formData.country.trim()) {
+      temp.country = "Country is required";
+    }
+
     if (!formData.message.trim()) {
       temp.message = "Message is required";
     }
@@ -66,6 +71,7 @@ const Contact = () => {
     formBody.append("name", formData.name);
     formBody.append("number", formData.phone);
     formBody.append("email", formData.email);
+    formBody.append("country", formData.country);
     formBody.append("message", formData.message);
 
     try {
@@ -91,6 +97,7 @@ const Contact = () => {
         name: "",
         phone: "",
         email: "",
+        country: "",
         message: "",
       });
     } catch (error) {
@@ -98,6 +105,7 @@ const Contact = () => {
       alert("Something went wrong");
     }
 
+    console.log(formData);
     setLoading(false);
   };
   return (
@@ -291,6 +299,20 @@ const Contact = () => {
                       error={!!errors.email}
                       helperText={errors.email}
                       label="Email Address"
+                      variant="outlined"
+                      InputProps={{ sx: { borderRadius: 2 } }}
+                    />
+                  </Box>
+
+                  <Box sx={{ gridColumn: { xs: "span 1", sm: "span 2" } }}>
+                    <TextField
+                      fullWidth
+                      name="country"
+                      value={formData.country}
+                      onChange={handleChange}
+                      error={!!errors.country}
+                      helperText={errors.country}
+                      label="Country"
                       variant="outlined"
                       InputProps={{ sx: { borderRadius: 2 } }}
                     />

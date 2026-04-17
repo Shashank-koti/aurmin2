@@ -86,7 +86,7 @@ const Navbar = () => {
               variant="contained"
               color="#D4AF37"
               sx={{ borderRadius: 20 }}
-              href="https://wa.me/917893546664" target="_blank"
+              href="https://wa.me/918125109712" target="_blank"
             >
               Get a Quote
             </Button>
@@ -196,7 +196,7 @@ const Navbar = () => {
                 fontWeight: 600,
                 paddingX: 3,
               }}
-              href="https://wa.me/917893546664" target="_blank"
+              href="https://wa.me/918125109712" target="_blank"
             >
               Get a Quote
             </Button>
