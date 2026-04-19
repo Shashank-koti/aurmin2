@@ -14,24 +14,24 @@ const About = () => {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <Typography variant="h6" color="secondary" gutterBottom sx={{ fontWeight: 600, letterSpacing: 1 }}>
+              <Typography variant="h6" component="p" color="secondary" gutterBottom sx={{ fontWeight: 600, letterSpacing: 1 }}>
                 ABOUT AURMIN
               </Typography>
-              <Typography variant="h2" color="text.primary" sx={{ fontWeight: 700, mb: 4 }}>
-                Building Global Trust.
+              <Typography variant="h4" component="h3" color="text.primary" sx={{ fontWeight: 700, mb: 4 }}>
+                Trusted Import Export Business in India
               </Typography>
-              
+
               <Typography variant="body1" color="text.secondary" paragraph sx={{ fontSize: '1.1rem', mb: 3 }}>
-                At Aurmin, our mission is to streamline international trade. We source the finest commodities globally and distribute them with unparalleled precision and efficiency.
+                At Aurmin, our mission is to streamline international trade as a leading B2B export company based in India. We source the finest commodities globally and distribute them with unparalleled precision and efficiency.
               </Typography>
-              
+
               <Typography variant="body1" color="text.secondary" paragraph sx={{ fontSize: '1.1rem', mb: 4 }}>
-                Our vision bridges local producers directly to the global marketplace, establishing sustainable, compliant, and highly transparent supply chains for all of our international partners.
+                Our vision bridges local producers directly to the global marketplace, establishing sustainable, compliant, and highly transparent supply chains, serving international clients seamlessly.
               </Typography>
 
             </motion.div>
           </Box>
-          
+
           <Box>
             <motion.div
               initial={{ opacity: 0, x: 50 }}
@@ -39,9 +39,9 @@ const About = () => {
               transition={{ duration: 0.8, delay: 0.2 }}
               viewport={{ once: true }}
             >
-              <Paper 
+              <Paper
                 elevation={0}
-                sx={{ 
+                sx={{
                   position: 'relative',
                   height: '500px',
                   borderRadius: 6,
@@ -55,7 +55,7 @@ const About = () => {
                   alt="Warehouse logistics"
                   sx={{ width: '100%', height: '100%', objectFit: 'cover' }}
                 />
-                <Box 
+                <Box
                   sx={{
                     position: 'absolute',
                     bottom: 0, left: 0, right: 0,

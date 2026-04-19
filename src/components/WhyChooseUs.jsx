@@ -9,22 +9,22 @@ import { motion } from 'framer-motion';
 const reasons = [
   {
     title: '24/7 Support',
-    desc: 'Round-the-clock assistance for all your logistics needs.',
+    desc: 'Round-the-clock assistance as your dedicated exporters from India.',
     icon: <SupportAgentIcon sx={{ fontSize: 50, color: '#D4AF37' }} />
   },
   {
     title: 'Global Network',
-    desc: 'Partners and facilities spanning across 120+ countries.',
+    desc: 'Partners and facilities spanning across 120+ countries for B2B export services.',
     icon: <LanguageIcon sx={{ fontSize: 50, color: '#D4AF37' }} />
   },
   {
     title: 'Fast Delivery',
-    desc: 'Optimized routing for the quickest transit times possible.',
+    desc: 'Optimized routing for quickest transit times as a bulk export supplier.',
     icon: <RocketLaunchIcon sx={{ fontSize: 50, color: '#D4AF37' }} />
   },
   {
     title: 'Inspection',
-    desc: 'Rigorous inspection processes to ensure product integrity.',
+    desc: 'Rigorous inspection processes to ensure product integrity before shipping.',
     icon: <HighQualityIcon sx={{ fontSize: 50, color: '#D4AF37' }} />
   }
 ];
@@ -39,11 +39,11 @@ const WhyChooseUs = () => {
     >
       <Container maxWidth="lg">
         <Box sx={{ textAlign: 'center', mb: 8 }}>
-          <Typography variant="h6" color="secondary" gutterBottom sx={{ fontWeight: 600, letterSpacing: 1 }}>
+          <Typography variant="h6" component="p" color="secondary" gutterBottom sx={{ fontWeight: 600, letterSpacing: 1 }}>
             WHY CHOOSE US
           </Typography>
-          <Typography variant="h2" color="text.primary" sx={{ fontWeight: 700 }}>
-            The Aurmin Advantage
+          <Typography variant="h2" component="h2" color="text.primary" sx={{ fontWeight: 700 }}>
+            Top International Trade Company
           </Typography>
         </Box>
 
@@ -73,7 +73,7 @@ const WhyChooseUs = () => {
                 >
                   <CardContent sx={{ textAlign: 'center' }}>
                     <Box sx={{ mb: 2 }}>{reason.icon}</Box>
-                    <Typography variant="h6" sx={{ fontWeight: 700, mb: 1, color: '#1F2937' }}>
+                    <Typography variant="h6" component="h3" sx={{ fontWeight: 700, mb: 1, color: '#1F2937' }}>
                       {reason.title}
                     </Typography>
                     <Typography variant="body2" sx={{ color: '#4B4A3F' }}>

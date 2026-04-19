@@ -9,23 +9,27 @@ import worldwide from "../assets/worldwide.jpg";
 const services = [
   {
     title: 'Worldwide Shipping',
-    description: 'We offer reliable, fast, and secure shipping to ports around the world. Track your cargo in real-time.',
-    image: worldwide
+    description: 'We offer reliable, fast, and secure shipping to ports around the world, providing affordable global export services.',
+    image: worldwide,
+    alt: 'Worldwide shipping - global export services'
   },
   {
     title: 'Product Sourcing',
-    description: 'Leverage our vast network of local manufacturers to source the highest quality materials.',
-    image: product
+    description: 'Leverage our vast network of local manufacturers to source the highest quality materials for your import export business India.',
+    image: product,
+    alt: 'Product Sourcing - import export business India'
   },
   {
     title: 'Customs & Compliance',
-    description: 'Navigate complex international trade regulations effortlessly with our expert compliance team.',
-    image: customs
+    description: 'Navigate complex international trade regulations effortlessly with our expert compliance team in India.',
+    image: customs,
+    alt: 'Customs and Compliance - exporters from India'
   },
   {
     title: 'Supply Chain Solutions',
-    description: 'End-to-end supply chain management tailored to your specific business requirements.',
-    image: supplychain
+    description: 'End-to-end supply chain management tailored to modern international trade company requirements.',
+    image: supplychain,
+    alt: 'Supply Chain Solutions - international trade company'
   }
 ];
 
@@ -34,11 +38,11 @@ const Services = () => {
     <Box id="services" sx={{ py: 12, backgroundColor: '#4B4A3F' }}>
       <Container maxWidth="lg">
         <Box sx={{ textAlign: 'center', mb: 8 }}>
-          <Typography variant="h6" color="secondary" gutterBottom sx={{ fontWeight: 600, letterSpacing: 1 }}>
+          <Typography variant="h6" component="p" color="secondary" gutterBottom sx={{ fontWeight: 600, letterSpacing: 1 }}>
             OUR EXPERTISE
           </Typography>
-          <Typography variant="h2" color="text.primary" sx={{ fontWeight: 700 }}>
-            Premium Export Services
+          <Typography variant="h2" component="h2" color="text.primary" sx={{ fontWeight: 600 }}>
+            B2B Export Services & Logistics
           </Typography>
         </Box>
 
@@ -52,9 +56,9 @@ const Services = () => {
                 viewport={{ once: true, amount: 0.2 }}
                 style={{ height: '100%' }}
               >
-                <Card 
-                  sx={{ 
-                    height: '100%', 
+                <Card
+                  sx={{
+                    height: '100%',
                     display: 'flex',
                     flexDirection: 'column',
                     borderRadius: 4,
@@ -72,11 +76,11 @@ const Services = () => {
                     component="img"
                     height="180"
                     image={service.image}
-                    alt={service.title}
+                    alt={service.alt || service.title}
                     sx={{ objectFit: 'cover' }}
                   />
                   <CardContent sx={{ p: 3, flexGrow: 1, backgroundColor: '#F3E9D2' }}>
-                    <Typography variant="h6" sx={{ mb: 1, fontWeight: 700, color: '#1F2937' }}>
+                    <Typography variant="h6" component="h3" sx={{ mb: 1, fontWeight: 700, color: '#1F2937' }}>
                       {service.title}
                     </Typography>
                     <Typography variant="body2" sx={{ color: '#4B4A3F', lineHeight: 1.6 }}>

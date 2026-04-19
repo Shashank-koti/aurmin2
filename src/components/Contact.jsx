@@ -130,6 +130,7 @@ const Contact = () => {
             <Box sx={{ pr: { md: 4 } }}>
               <Typography
                 variant="h6"
+                component="p"
                 color="secondary"
                 gutterBottom
                 sx={{ fontWeight: 600, letterSpacing: 1 }}
@@ -138,17 +139,19 @@ const Contact = () => {
               </Typography>
               <Typography
                 variant="h3"
+                component="h2"
                 sx={{ fontWeight: 700, mb: 3, color: "#F8FAFC" }}
               >
-                Contact Our Team
+                Contact Exporters from India
               </Typography>
               <Typography
                 variant="body1"
+                component="p"
                 color="text.secondary"
                 sx={{ mb: 6, fontSize: "1.1rem" }}
               >
                 Reach out to us to discuss partnerships, quotes, or complete
-                supply chain solutions designed for your needs.
+                supply chain solutions perfectly designed by a global export services team.
               </Typography>
 
               <Box sx={{ display: "flex", alignItems: "center", mb: 4 }}>
@@ -250,9 +253,10 @@ const Contact = () => {
               >
                 <Typography
                   variant="h4"
+                  component="h3"
                   sx={{ mb: 4, fontWeight: 700, color: "#F8FAFC" }}
                 >
-                  Send Us a Message
+                  Get Export Solutions
                 </Typography>
 
                 <Box

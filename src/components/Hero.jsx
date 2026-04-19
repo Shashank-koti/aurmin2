@@ -55,6 +55,7 @@ const Hero = () => {
         >
           <Typography
             variant="h1"
+            component="h1"
             sx={{
               color: '#D4AF37',
               fontSize: { xs: '3rem', md: '4.5rem', lg: '5.5rem' },
@@ -64,11 +65,12 @@ const Hero = () => {
               lineHeight: 1.1,
             }}
           >
-            Empowering Global Trade
+            Global Export Services
           </Typography>
 
           <Typography
             variant="h5"
+            component="p"
             sx={{
               mb: 5,
               maxWidth: '650px',
@@ -79,7 +81,7 @@ const Hero = () => {
               textShadow: "0px 2px 10px rgba(0,0,0,0.7)"
             }}
           >
-            We are your premier partner in worldwide logistics, ensuring professional, reliable, and secure export solutions.
+            Aurmin Global exports is your premier partner in worldwide logistics, ensuring professional and secure export company India solutions.
           </Typography>
 
           <Stack direction={{ xs: 'column', sm: 'row' }} spacing={2}>

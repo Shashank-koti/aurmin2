@@ -14,8 +14,8 @@ const Footer = () => {
             <Typography variant="h5" color="secondary" sx={{ fontWeight: 800, letterSpacing: '2px', mb: 2 }}>
               AURMIN
             </Typography>
-            <Typography variant="body2" sx={{ color: '#E6D3A3', mb: 3, maxWidth: '100%' }}>
-              Your trusted partner in global trade, logistics, and supply chain management. Connecting the world, one shipment at a time.
+            <Typography variant="body2" component="p" sx={{ color: '#E6D3A3', mb: 3, maxWidth: '100%' }}>
+              Aurmin Global exports - Your trusted partner in global trade, logistics, and supply chain management. Connecting the world as a leading export company India.
             </Typography>
             <Box sx={{ display: 'flex', gap: 1 }}>
               <IconButton sx={{ color: '#E6D3A3', '&:hover': { color: '#D4AF37' } }}>

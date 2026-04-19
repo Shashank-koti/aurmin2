@@ -14,21 +14,25 @@ const products = [
     title: 'Turmeric',
     image: turmeric,
     desc: 'Sourced from premium regions, our turmeric is known for its rich color and high curcumin content, ensuring superior quality for global markets.',
+    alt: 'Turmeric export products from India - Aurmin Global'
   },
   {
     title: 'Ginger',
     image: ginger,
     desc: 'We supply carefully selected ginger with strong aroma and freshness, ideal for food processing and international trade.',
+    alt: 'Ginger export supply - bulk export supplier'
   },
   {
     title: 'Spices',
     image: spices,
     desc: 'Delivering authentic Indian spices with consistent quality, sourced directly from trusted farming regions for global excellence.',
+    alt: 'Authentic Indian Spices - B2B export services'
   },
   {
     title: 'Red Chillies',
     image: chillies,
     desc: 'Our red chillies are sourced from renowned regions, offering vibrant color and strong pungency for premium export standards.',
+    alt: 'Red Chillies - import export business India'
   }
 ];
 
@@ -38,14 +42,14 @@ const Products = () => {
       <Container maxWidth="lg">
         <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', mb: 6, flexWrap: 'wrap', gap: 3 }}>
           <Box maxWidth="600px">
-            <Typography variant="h6" color="secondary" gutterBottom sx={{ fontWeight: 600, letterSpacing: 1 }}>
+            <Typography variant="h6" component="p" color="secondary" gutterBottom sx={{ fontWeight: 600, letterSpacing: 1 }}>
               PRODUCTS
             </Typography>
-            <Typography variant="h2" color="text.primary" sx={{ fontWeight: 700, mb: 2 }}>
-              What We Export
+            <Typography variant="h2" component="h2" color="text.primary" sx={{ fontWeight: 600, mb: 2 }}>
+              Bulk Export Supplier from India
             </Typography>
-            <Typography variant="body1" color="text.secondary" sx={{ fontSize: '1.1rem' }}>
-              We facilitate the movement of diverse commodities efficiently.
+            <Typography variant="body1" component="p" color="text.secondary" sx={{ fontSize: '1.1rem' }}>
+              We facilitate the movement of diverse commodities efficiently for global export services.
             </Typography>
           </Box>
           <Button
@@ -105,7 +109,7 @@ const Products = () => {
                     <CardMedia
                       component="img"
                       image={product.image}
-                      alt={product.title}
+                      alt={product.alt || product.title}
                       sx={{
                         height: '100%',
                         width: '100%',
@@ -125,7 +129,7 @@ const Products = () => {
                     />
                   </Box>
                   <CardContent sx={{ backgroundColor: '#6B7D5B', p: 3 }}>
-                    <Typography variant="h5" sx={{ fontWeight: 700, mb: 1, color: '#F8FAFC' }}>
+                    <Typography variant="h5" component="h3" sx={{ fontWeight: 700, mb: 1, color: '#F8FAFC' }}>
                       {product.title}
                     </Typography>
                     <Typography variant="body2" color="text.secondary">
