@@ -31,9 +31,9 @@ const reasons = [
 
 const WhyChooseUs = () => {
   return (
-    <Box 
-      sx={{ 
-        py: 12, 
+    <Box
+      sx={{
+        py: 12,
         backgroundColor: '#4B4A3F',
       }}
     >
@@ -42,7 +42,7 @@ const WhyChooseUs = () => {
           <Typography variant="h6" component="p" color="secondary" gutterBottom sx={{ fontWeight: 600, letterSpacing: 1 }}>
             WHY CHOOSE US
           </Typography>
-          <Typography variant="h2" component="h2" color="text.primary" sx={{ fontWeight: 700 }}>
+          <Typography variant="h3" component="h3" color="text.primary" sx={{ fontWeight: 500 }}>
             Top International Trade Company
           </Typography>
         </Box>
@@ -56,9 +56,9 @@ const WhyChooseUs = () => {
                 transition={{ duration: 0.5, delay: index * 0.15 }}
                 viewport={{ once: true }}
               >
-                <Card 
-                  sx={{ 
-                    height: '100%', 
+                <Card
+                  sx={{
+                    height: '100%',
                     boxShadow: '0 4px 6px -1px rgba(0,0,0,0.05)',
                     p: 2,
                     backgroundColor: '#F3E9D2',
