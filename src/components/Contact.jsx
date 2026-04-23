@@ -197,7 +197,7 @@ const Contact = () => {
                     Phone
                   </Typography>
                   <Typography variant="body2" color="text.secondary">
-                    +91-7893546664
+                    +91-8125109712
                   </Typography>
                 </Box>
               </Box>
@@ -221,7 +221,7 @@ const Contact = () => {
                     Email
                   </Typography>
                   <Typography variant="body2" color="text.secondary">
-                    Info@Auminglobal.com
+                    info@aurminglobal.com
                   </Typography>
                 </Box>
               </Box>
