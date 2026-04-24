@@ -50,7 +50,7 @@ const Navbar = () => {
       <Box sx={{ my: 3, display: "flex", justifyContent: "center" }}>
         <Box
           component="img"
-          src=""
+          src={logo1}
           alt="Aurmin Logo"
           sx={{ height: 45, width: "auto" }}
         />
@@ -116,7 +116,7 @@ const Navbar = () => {
           >
             <Box
               component="img"
-              src=""
+              src={logo1}
               alt="Aurmin Logo"
               sx={{
                 height: { xs: 40, md: 50 },
