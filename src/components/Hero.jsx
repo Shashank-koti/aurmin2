@@ -2,7 +2,7 @@ import React from 'react';
 import { Box, Typography, Button, Container, Stack } from '@mui/material';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import image from "../assets/exportHero.jpg"
-import Brochure from "../assets/Brochure-final.pdf"
+import Brochure from "../assets/Brochure-final.pdf";
 
 const Hero = () => {
   const { scrollY } = useScroll();
