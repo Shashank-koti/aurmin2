@@ -15,7 +15,7 @@ import {
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import { Link } from "react-scroll";
-import navImg from "../assets/logo1.png";
+import navImg from "../assets/navImg.png";
 
 const navItems = ["Home", "About", "Services", "Products", "Contact"];
 
