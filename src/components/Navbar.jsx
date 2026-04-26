@@ -15,7 +15,7 @@ import {
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import { Link } from "react-scroll";
-import logo1 from "../assets/logo1.png";
+import navImg from "../assets/logo1.png";
 
 const navItems = ["Home", "About", "Services", "Products", "Contact"];
 
@@ -50,8 +50,8 @@ const Navbar = () => {
       <Box sx={{ my: 3, display: "flex", justifyContent: "center" }}>
         <Box
           component="img"
-          src={logo1}
-          alt="Aurmin Logo"
+          src={navImg}
+          alt="logo-aurmin"
           sx={{ height: 45, width: "auto" }}
         />
       </Box>
@@ -116,8 +116,8 @@ const Navbar = () => {
           >
             <Box
               component="img"
-              src={logo1}
-              alt="Aurmin Logo"
+              src={navImg}
+              alt="logo-aurmin"
               sx={{
                 height: { xs: 40, md: 50 },
                 width: "auto",
@@ -125,7 +125,7 @@ const Navbar = () => {
                 filter: scrolled
                   ? "none"
                   : "drop-shadow(0 2px 4px rgba(0,0,0,0.5))",
-                "&:hover": { transform: "scale(1.05)" },
+                // "&:hover": { transform: "scale(1.05)" },
               }}
             />
           </Link>
