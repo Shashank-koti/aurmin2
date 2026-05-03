@@ -20,7 +20,7 @@ const reasons = [
   {
     title: 'Fast Delivery',
     desc: 'Optimized routing for quickest transit times as a bulk export supplier.',
-    icon: <RocketLaunchIcon sx={{ fontSize: 50, color: '#D4AF37' }} />
+    icon: <RocketLaunchIcon sx={{ fontSize: 50, color: '#D4AF37', transform: 'rotate(-45deg)' }} />
   },
   {
     title: 'Inspection',
@@ -55,6 +55,7 @@ const WhyChooseUs = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.15 }}
                 viewport={{ once: true }}
+                style={{ height: '100%' }}
               >
                 <Card
                   sx={{
