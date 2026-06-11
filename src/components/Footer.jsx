@@ -29,7 +29,7 @@ const Footer = () => {
               </IconButton>
             </Box>
           </Box>
-          
+
           <Box sx={{ gridColumn: { xs: 'span 1' } }}>
             <Typography variant="subtitle1" sx={{ fontWeight: 700, mb: 2 }}>Quick Links</Typography>
             <Link href="#home" color="inherit" underline="none" sx={{ display: 'block', mb: 1, color: '#E6D3A3', '&:hover': { color: '#D4AF37' } }}>Home</Link>
@@ -56,11 +56,11 @@ const Footer = () => {
             </Typography>
           </Box>
         </Box>
-        
+
         <Divider sx={{ my: 4, borderColor: 'rgba(255,255,255,0.1)' }} />
-        
+
         <Typography variant="body2" align="center" sx={{ color: '#E6D3A3' }}>
-          &copy; {new Date().getFullYear()} Aurmin Global Trade. All rights reserved.
+          &copy; {new Date().getFullYear()} Aurmin Global Trade. All rights reserved. <a href="https://www.arccreativemedia.com/" style={{ textDecoration: "none", color: "#E6D3A3" }}>Powered by ARC Creative Media.</a>
         </Typography>
       </Container>
     </Box>
