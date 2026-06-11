@@ -60,7 +60,7 @@ const Footer = () => {
         <Divider sx={{ my: 4, borderColor: 'rgba(255,255,255,0.1)' }} />
 
         <Typography variant="body2" align="center" sx={{ color: '#E6D3A3' }}>
-          &copy; {new Date().getFullYear()} Aurmin Global Trade. All rights reserved. <a href="https://www.arccreativemedia.com/" style={{ textDecoration: "none", color: "#E6D3A3" }}>Powered by ARC Creative Media.</a>
+          &copy; {new Date().getFullYear()} Aurmin Global Trade. All rights reserved. <Link href="https://www.arccreativemedia.com/" sx={{ textDecoration: "none", color: "#E6D3A3", '&:hover': { textDecoration: "underline", color: '#D4AF37' } }}>Powered by ARC Creative Media.</Link>
         </Typography>
       </Container>
     </Box>
