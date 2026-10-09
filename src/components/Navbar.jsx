@@ -9,12 +9,12 @@ import {
   Drawer,
   List,
   ListItem,
-  ListItemText,
   useTheme,
   useMediaQuery,
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
-import { Link } from "react-scroll";
+import { Link as ScrollLink, scroller } from "react-scroll";
+import { Link as RouterLink, useLocation, useNavigate } from "react-router-dom";
 import navImg from "../assets/navImg.png";
 
 const navItems = ["Home", "About", "Services", "Products", "Contact"];
@@ -24,6 +24,10 @@ const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  const isHomePage = location.pathname === "/";
 
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
@@ -37,56 +41,91 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const handleNavClick = (item) => {
+    if (item === "Products") {
+      navigate("/products/fresh-onions");
+      return;
+    }
+    const target = item.toLowerCase();
+    if (isHomePage) {
+      scroller.scrollTo(target, {
+        smooth: true,
+        duration: 400,
+      });
+    } else {
+      navigate(`/#${target}`);
+    }
+  };
+
   const drawer = (
     <Box
-      onClick={handleDrawerToggle}
       sx={{
         textAlign: "center",
         backgroundColor: "#2F5D50",
         height: "100%",
         color: "#F8FAFC",
+        display: "flex",
+        flexDirection: "column",
+        overflowY: "auto",
       }}
     >
       <Box sx={{ my: 3, display: "flex", justifyContent: "center" }}>
-        <Box
-          component="img"
-          src={navImg}
-          alt="logo-aurmin"
-          sx={{ height: 45, width: "auto" }}
-        />
+        <RouterLink to="/" onClick={() => setMobileOpen(false)}>
+          <Box
+            component="img"
+            src={navImg}
+            alt="logo-aurmin"
+            sx={{ height: 45, width: "auto" }}
+          />
+        </RouterLink>
       </Box>
-      <List>
+
+      <List sx={{ px: 2 }}>
         {navItems.map((item) => (
-          <ListItem key={item} disablePadding>
-            <Link
-              to={item.toLowerCase()}
-              smooth={true}
-              duration={500}
-              style={{
+          <ListItem
+            key={item}
+            disablePadding
+            sx={{ borderBottom: "1px solid rgba(230, 211, 163, 0.1)" }}
+          >
+            <Box
+              onClick={() => {
+                handleNavClick(item);
+                setMobileOpen(false);
+              }}
+              sx={{
                 width: "100%",
                 textAlign: "center",
-                padding: "15px 0",
+                py: 1.5,
                 cursor: "pointer",
+                color: "#F8FAFC",
+                "&:hover": { color: "#D4AF37" },
               }}
             >
-              <ListItemText primary={item} />
-            </Link>
+              <Typography sx={{ fontWeight: 500 }}>{item}</Typography>
+            </Box>
           </ListItem>
         ))}
-        <ListItem disablePadding>
+
+        <ListItem disablePadding sx={{ mt: 3 }}>
           <Box
             sx={{
               width: "100%",
               display: "flex",
               justifyContent: "center",
-              mt: 2,
             }}
           >
             <Button
               variant="contained"
-              color="#D4AF37"
-              sx={{ borderRadius: 20 }}
-              href="https://wa.me/918125109712" target="_blank"
+              color="primary"
+              sx={{
+                borderRadius: 20,
+                backgroundColor: "#D4AF37",
+                color: "#1F2937",
+                fontWeight: 600,
+                width: "100%",
+              }}
+              href="https://wa.me/918125109712"
+              target="_blank"
             >
               Get a Quote
             </Button>
@@ -100,37 +139,54 @@ const Navbar = () => {
     <AppBar
       position="fixed"
       sx={{
-        background: scrolled ? "#2F5D50" : "transparent",
-        boxShadow: scrolled ? "0 4px 20px rgba(0,0,0,0.2)" : "none",
+        background: scrolled || !isHomePage ? "#2F5D50" : "transparent",
+        boxShadow: scrolled || !isHomePage ? "0 4px 20px rgba(0,0,0,0.2)" : "none",
         transition: "all 0.3s ease-in-out",
         padding: { xs: "0.5rem 0", md: "0.5rem 2rem" },
       }}
     >
       <Toolbar sx={{ display: "flex", justifyContent: "space-between" }}>
+        {/* Logo */}
         <Box sx={{ display: "flex", alignItems: "center", cursor: "pointer" }}>
-          <Link
-            to="home"
-            smooth={true}
-            duration={500}
-            style={{ display: "flex", alignItems: "center" }}
-          >
-            <Box
-              component="img"
-              src={navImg}
-              alt="logo-aurmin"
-              sx={{
-                height: { xs: 40, md: 50 },
-                width: "auto",
-                transition: "transform 0.3s",
-                filter: scrolled
-                  ? "none"
-                  : "drop-shadow(0 2px 4px rgba(0,0,0,0.5))",
-                // "&:hover": { transform: "scale(1.05)" },
-              }}
-            />
-          </Link>
+          {isHomePage ? (
+            <ScrollLink
+              to="home"
+              smooth={true}
+              duration={500}
+              style={{ display: "flex", alignItems: "center" }}
+            >
+              <Box
+                component="img"
+                src={navImg}
+                alt="logo-aurmin"
+                sx={{
+                  height: { xs: 40, md: 50 },
+                  width: "auto",
+                  transition: "transform 0.3s",
+                  filter:
+                    scrolled || !isHomePage
+                      ? "none"
+                      : "drop-shadow(0 2px 4px rgba(0,0,0,0.5))",
+                }}
+              />
+            </ScrollLink>
+          ) : (
+            <RouterLink to="/" style={{ display: "flex", alignItems: "center" }}>
+              <Box
+                component="img"
+                src={navImg}
+                alt="logo-aurmin"
+                sx={{
+                  height: { xs: 40, md: 50 },
+                  width: "auto",
+                  transition: "transform 0.3s",
+                }}
+              />
+            </RouterLink>
+          )}
         </Box>
 
+        {/* Mobile menu trigger */}
         {isMobile ? (
           <IconButton
             color="inherit"
@@ -140,10 +196,11 @@ const Navbar = () => {
           >
             <MenuIcon
               fontSize="large"
-              sx={{ color: scrolled ? "#D4AF37" : "#ffffff" }}
+              sx={{ color: scrolled || !isHomePage ? "#D4AF37" : "#ffffff" }}
             />
           </IconButton>
         ) : (
+          /* Desktop nav items */
           <Box sx={{ display: "flex", alignItems: "center", gap: 4 }}>
             {navItems.map((item) => (
               <Box
@@ -154,15 +211,14 @@ const Navbar = () => {
                   flexDirection: "column",
                 }}
               >
-                <Link
-                  to={item.toLowerCase()}
-                  smooth={true}
-                  duration={400}
-                  style={{ cursor: "pointer" }}
+                <Box
+                  onClick={() => handleNavClick(item)}
+                  sx={{ cursor: "pointer" }}
                 >
                   <Typography
                     sx={{
-                      color: scrolled ? "#F8FAFC" : "#4B4A3F",
+                      color: "#F8FAFC",
+                      textShadow: scrolled || !isHomePage ? "none" : "0 1px 6px rgba(0,0,0,0.7)",
                       fontWeight: 500,
                       position: "relative",
                       display: "inline-block",
@@ -185,9 +241,10 @@ const Navbar = () => {
                   >
                     {item}
                   </Typography>
-                </Link>
+                </Box>
               </Box>
             ))}
+
             <Button
               variant="contained"
               color="primary"
@@ -195,8 +252,14 @@ const Navbar = () => {
                 borderRadius: 20,
                 fontWeight: 600,
                 paddingX: 3,
+                backgroundColor: "#D4AF37",
+                color: "#1F2937",
+                "&:hover": {
+                  backgroundColor: "#C9A24B",
+                },
               }}
-              href="https://wa.me/918125109712" target="_blank"
+              href="https://wa.me/918125109712"
+              target="_blank"
             >
               Get a Quote
             </Button>
@@ -211,7 +274,11 @@ const Navbar = () => {
         ModalProps={{ keepMounted: true }}
         sx={{
           display: { xs: "block", md: "none" },
-          "& .MuiDrawer-paper": { boxSizing: "border-box", width: 250 },
+          "& .MuiDrawer-paper": {
+            boxSizing: "border-box",
+            width: 270,
+            backgroundColor: "#2F5D50",
+          },
         }}
       >
         {drawer}
