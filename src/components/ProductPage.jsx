@@ -100,7 +100,7 @@ const ProductPage = ({ productKey }) => {
 
   return (
     <Box sx={{ backgroundColor: '#4B4A3F', color: '#F8FAFC', minHeight: '100vh', pb: 14 }}>
-      {/* Clean, Premium Minimal Product Header (No noisy background image) */}
+      {/* Clean, Premium Minimal Product Header */}
       <Box
         sx={{
           backgroundColor: '#24493e',
@@ -138,7 +138,7 @@ const ProductPage = ({ productKey }) => {
               </MuiLink>
               <MuiLink
                 component={Link}
-                to="/products/fresh-onions"
+                to="/products/red-chillies"
                 underline="hover"
                 sx={{
                   color: '#E6D3A3',
@@ -170,19 +170,34 @@ const ProductPage = ({ productKey }) => {
                 gap: 2.5,
               }}
             >
-              <Typography
-                variant="h1"
-                component="h1"
-                sx={{
-                  fontSize: { xs: '2.2rem', sm: '2.8rem', md: '3.4rem' },
-                  fontWeight: 700,
-                  letterSpacing: '-0.02em',
-                  color: '#F8FAFC',
-                  lineHeight: 1.2,
-                }}
-              >
-                {product.title}
-              </Typography>
+              <Box>
+                <Typography
+                  variant="h1"
+                  component="h1"
+                  sx={{
+                    fontSize: { xs: '2.2rem', sm: '2.8rem', md: '3.4rem' },
+                    fontWeight: 700,
+                    letterSpacing: '-0.02em',
+                    color: '#F8FAFC',
+                    lineHeight: 1.2,
+                  }}
+                >
+                  {product.title}
+                </Typography>
+                {product.tagline && (
+                  <Typography
+                    sx={{
+                      color: '#E6D3A3',
+                      fontSize: { xs: '0.95rem', md: '1.05rem' },
+                      fontWeight: 500,
+                      mt: 0.8,
+                      maxWidth: '750px',
+                    }}
+                  >
+                    {product.tagline}
+                  </Typography>
+                )}
+              </Box>
 
               <Stack direction="row" spacing={2} sx={{ flexShrink: 0 }}>
                 <Button
@@ -342,6 +357,22 @@ const ProductPage = ({ productKey }) => {
                       Export Overview
                     </Typography>
                   </Box>
+
+                  {product.introHeadline && (
+                    <Typography
+                      variant="h4"
+                      component="h2"
+                      sx={{
+                        color: '#D4AF37',
+                        fontWeight: 700,
+                        fontSize: { xs: '1.25rem', sm: '1.45rem', md: '1.6rem' },
+                        lineHeight: 1.35,
+                        mb: 2,
+                      }}
+                    >
+                      {product.introHeadline}
+                    </Typography>
+                  )}
 
                   {product.intro.map((para, i) => (
                     <Typography
@@ -548,6 +579,25 @@ const ProductPage = ({ productKey }) => {
 
                   {/* Section Content */}
                   <CardContent sx={{ p: { xs: 3, sm: 4, md: 4.5 } }}>
+                    {/* Optional Section Description Paragraph */}
+                    {section.description && (
+                      <Typography
+                        variant="body1"
+                        sx={{
+                          color: '#F8FAFC',
+                          fontSize: { xs: '1rem', md: '1.08rem' },
+                          lineHeight: 1.85,
+                          mb: 3,
+                          p: 2.5,
+                          borderRadius: 2.5,
+                          backgroundColor: 'rgba(75, 74, 63, 0.45)',
+                          borderLeft: '4px solid #D4AF37',
+                        }}
+                      >
+                        {section.description}
+                      </Typography>
+                    )}
+
                     {/* List Section */}
                     {section.type === 'list' && (
                       <Box
@@ -783,7 +833,7 @@ const ProductPage = ({ productKey }) => {
           <Box
             sx={{
               display: 'grid',
-              gridTemplateColumns: { xs: '1fr', sm: 'repeat(2, 1fr)', md: 'repeat(3, 1fr)', lg: 'repeat(5, 1fr)' },
+              gridTemplateColumns: { xs: '1fr', sm: 'repeat(2, 1fr)', md: 'repeat(4, 1fr)' },
               gap: 2.5,
             }}
           >

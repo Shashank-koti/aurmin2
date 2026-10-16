@@ -33,12 +33,15 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/products/fresh-onions" element={<ProductPage productKey="fresh-onions" />} />
-          <Route path="/products/cashew-nuts-kernels" element={<ProductPage productKey="cashew-nuts-kernels" />} />
-          <Route path="/products/ginger" element={<ProductPage productKey="ginger" />} />
-          <Route path="/products/turmeric" element={<ProductPage productKey="turmeric" />} />
-          <Route path="/products/rice" element={<ProductPage productKey="rice" />} />
           <Route path="/products/red-chillies" element={<ProductPage productKey="red-chillies" />} />
+          <Route path="/products/turmeric" element={<ProductPage productKey="turmeric" />} />
+          <Route path="/products/green-cardamom" element={<ProductPage productKey="green-cardamom" />} />
+          <Route path="/products/ginger" element={<ProductPage productKey="ginger" />} />
+          <Route path="/products/fresh-onions" element={<ProductPage productKey="fresh-onions" />} />
+          <Route path="/products/black-pepper" element={<ProductPage productKey="black-pepper" />} />
+          <Route path="/products/freeze-dried-mango-powder" element={<ProductPage productKey="freeze-dried-mango-powder" />} />
+          <Route path="/products/cashew-nuts-kernels" element={<ProductPage productKey="cashew-nuts-kernels" />} />
+          <Route path="/products/rice" element={<ProductPage productKey="rice" />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
         <Footer />

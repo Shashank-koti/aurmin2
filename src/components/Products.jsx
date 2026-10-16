@@ -3,22 +3,65 @@ import { Box, Container, Typography, Card, CardMedia, CardContent, Button } from
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
+import chillies from "../assets/redChilli.jpg";
+import turmeric from "../assets/turmeric.jpg";
+import greenCardamom from "../assets/greenCardamom.jpg";
+import ginger from "../assets/ginger.jpg";
 import freshOnions from "../assets/freshOnions.jpg";
+import blackPepper from "../assets/blackPepper.jpg";
+import mangoPowder from "../assets/mangoPowder.jpg";
 import cashewNuts from "../assets/cashewNuts.jpg";
 import rice from "../assets/rice.jpg";
-import turmeric from "../assets/turmeric.jpg";
-import ginger from "../assets/ginger.jpg";
-import chillies from "../assets/redChilli.jpg";
-import spices from "../assets/spices.jpg";
-import Brochure from "../assets/Brochure-final.pdf";
 
 const products = [
+  {
+    title: 'Red Chillies',
+    image: chillies,
+    path: '/products/red-chillies',
+    desc: 'Indian chillies with the colour & heat your market requires, sourced across premier growing regions including Guntur, Byadagi, and Kashmiri.',
+    alt: 'Red Chillies export supplier India - Aurmin Global'
+  },
+  {
+    title: 'Turmeric',
+    image: turmeric,
+    path: '/products/turmeric',
+    desc: 'Selected for colour, curcumin & consistency across Alleppey Finger, Erode, Salem, Nizamabad, and ultra-high curcumin Lakadong.',
+    alt: 'Turmeric export products from India - Aurmin Global'
+  },
+  {
+    title: 'Green Cardamom',
+    image: greenCardamom,
+    path: '/products/green-cardamom',
+    desc: 'Intensely aromatic, export-grade cardamom from South India’s Western Ghats across AGEB, AGB, AGS, and Coorg Green grades.',
+    alt: 'Green Cardamom export supplier India - Aurmin Global'
+  },
+  {
+    title: 'Ginger',
+    image: ginger,
+    path: '/products/ginger',
+    desc: 'Fresh and dried ginger sourced from Kerala (Cochin Ginger), high-gingerol Meghalaya, and organic Sikkim cultivars.',
+    alt: 'Ginger export supply - bulk export supplier India'
+  },
   {
     title: 'Fresh Onions',
     image: freshOnions,
     path: '/products/fresh-onions',
     desc: 'High-pungency, export-grade Indian red onions with long shelf life, sorted and graded in modern pack houses.',
     alt: 'Fresh Onions export supplier India - Aurmin Global'
+  },
+  {
+    title: 'Black Pepper',
+    image: blackPepper,
+    path: '/products/black-pepper',
+    desc: 'The "King of Spices" — bold, pungent, and export-grade from Malabar Coast across Malabar Garbled (MG1), TGEB, and TGSEB.',
+    alt: 'Black Pepper export supplier India - Aurmin Global'
+  },
+  {
+    title: 'Freeze-Dried Mango Powder',
+    image: mangoPowder,
+    path: '/products/freeze-dried-mango-powder',
+    desc: "100% pure fruit, zero additives — India's finest Alphonso, Kesar, and Totapuri varieties, freeze-dried to lock in flavour and nutrients.",
+    alt: 'Freeze Dried Mango Powder exporter India - Aurmin Global'
   },
   {
     title: 'Cashew Nuts & Kernels',
@@ -28,39 +71,11 @@ const products = [
     alt: 'Cashew Nuts and Kernels exporter India - Aurmin Global'
   },
   {
-    title: 'Rice — Basmati & Non-Basmati',
+    title: 'Rice — Non-Basmati & Basmati',
     image: rice,
     path: '/products/rice',
-    desc: 'World-renowned extra-long slender aromatic Basmati and versatile Non-Basmati varieties, regulated per APEDA export standards.',
-    alt: 'Basmati and Non-Basmati Rice export company India'
-  },
-  {
-    title: 'Turmeric',
-    image: turmeric,
-    path: '/products/turmeric',
-    desc: 'Sourced from premium regions, our turmeric is known for its rich color and high curcumin content, ensuring superior quality for global markets.',
-    alt: 'Turmeric export products from India - Aurmin Global'
-  },
-  {
-    title: 'Ginger',
-    image: ginger,
-    path: '/products/ginger',
-    desc: 'We supply carefully selected ginger with strong aroma and freshness, ideal for food processing and international trade.',
-    alt: 'Ginger export supply - bulk export supplier'
-  },
-  {
-    title: 'Red Chillies',
-    image: chillies,
-    path: '/products/red-chillies',
-    desc: 'Our red chillies are sourced from renowned regions, offering vibrant color and strong pungency for premium export standards.',
-    alt: 'Red Chillies - import export business India'
-  },
-  {
-    title: 'Indian Spices',
-    image: spices,
-    path: '/products/turmeric',
-    desc: 'Delivering authentic Indian whole and ground spices with consistent quality, sourced directly from trusted farming regions.',
-    alt: 'Authentic Indian Spices - B2B export services'
+    desc: 'High-demand Non-Basmati varieties including Sona Masuri, IR-64, and Swarna alongside world-renowned aromatic Basmati rice.',
+    alt: 'Non-Basmati and Basmati Rice export company India'
   }
 ];
 

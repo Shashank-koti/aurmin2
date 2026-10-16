@@ -43,7 +43,7 @@ const Navbar = () => {
 
   const handleNavClick = (item) => {
     if (item === "Products") {
-      navigate("/products/fresh-onions");
+      navigate("/products/red-chillies");
       return;
     }
     const target = item.toLowerCase();

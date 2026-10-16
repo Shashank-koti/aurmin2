@@ -1,7 +1,6 @@
 import React from 'react';
-import { Box, Container, Typography, Grid, Card, CardContent, CardMedia } from '@mui/material';
+import { Box, Container, Typography, Card, CardContent, CardMedia } from '@mui/material';
 import { motion } from 'framer-motion';
-import customs from "../assets/customs.jpg";
 import product from "../assets/product.jpg";
 import supplychain from "../assets/supplychain.jpg";
 import worldwide from "../assets/worldwide.jpg";
@@ -18,12 +17,6 @@ const services = [
     description: 'Leverage our vast network of local manufacturers to source the highest quality materials for your import export business India.',
     image: product,
     alt: 'Product Sourcing - import export business India'
-  },
-  {
-    title: 'Customs & Compliance',
-    description: 'Navigate complex international trade regulations effortlessly with our expert compliance team in India.',
-    image: customs,
-    alt: 'Customs and Compliance - exporters from India'
   },
   {
     title: 'Supply Chain Solutions',
@@ -46,7 +39,7 @@ const Services = () => {
           </Typography>
         </Box>
 
-        <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', md: 'repeat(2, 1fr)' }, gap: 4 }}>
+        <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', md: 'repeat(3, 1fr)' }, gap: 4 }}>
           {services.map((service, index) => (
             <Box key={index}>
               <motion.div
@@ -74,7 +67,7 @@ const Services = () => {
                 >
                   <CardMedia
                     component="img"
-                    height="180"
+                    height="190"
                     image={service.image}
                     alt={service.alt || service.title}
                     sx={{ objectFit: 'cover' }}
